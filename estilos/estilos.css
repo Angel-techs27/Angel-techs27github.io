@@ -4,9 +4,14 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
         url('https://images.unsplash.com/photo-1663970206579-c157cba7edda?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
+/* Ajustes generales */
 header {
     background-color: #1a1a1a;
     padding: 20px;
@@ -23,11 +28,14 @@ h2 {
     font-weight: bold;
 }
 
+
 iframe {
     width: 100%;
-    height: 500px;
+    height: 400px;
     border-radius: 10px;
+    border: none;
 }
+
 
 .contenedor {
     display: flex;
@@ -37,7 +45,8 @@ iframe {
     margin: 20px;
 }
 
-.cajaizquierda {
+
+.cajaizquierda, .cajaderecha {
     width: 45%;
     padding: 20px;
     border: 2px solid #007BFF;
@@ -48,9 +57,16 @@ iframe {
     flex-direction: column;
 }
 
-.cajaderecha {
-    width: 45%;
+@media screen and (max-width: 480px) {
+    header {
+        font-size: 1.2rem; 
+    }
+
+    .cajaizquierda, .cajaderecha {
+        padding: 15px; 
+    }
+
+    iframe {
+        height: 250px; 
+    }
 }
-
-
-
